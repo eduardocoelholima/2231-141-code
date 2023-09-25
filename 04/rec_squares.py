@@ -28,7 +28,7 @@ def draw_square(length):
 
 
 def rec_squares(length):
-    if length < 5:  # base case
+    if length < 10:  # base case
         return
     else:
         # unit of work

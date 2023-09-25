@@ -40,8 +40,8 @@ def rec_squares(length):
         turtle.left(45)
         next = math.sqrt(half**2*2)
         # recursive call
-        total = area + rec_squares(next)
-        return total
+        return area + rec_squares(next)
+        # return total
 
 
 def main():
