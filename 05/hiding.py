@@ -17,12 +17,26 @@ def hide( text_file, hidden_word):
        else:
            print( current_word, end="")
 
+
+
+
+
+
+
+
 def hide_using_file_name( text_file_name, hidden_word):
     """
     hide_using_file_name: String String -> NoneType
     Effect: Display the file with modifications.
     """
     hide( open( text_file_name), hidden_word)
+
+
+
+
+
+
+
 
 
 def test_hide():

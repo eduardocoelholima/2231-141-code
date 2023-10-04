@@ -28,4 +28,3 @@ print(sample_string[:])
 print(id(sample_string), id(sample_string[:]))
 print(sample_string[::-1])
 print(id(sample_string), id(sample_string[::-1]))
-# do more other examples
