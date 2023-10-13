@@ -8,7 +8,7 @@ def find_in_list(element:Any, search_list:list) -> bool:
             result = True
             # print(item)
             break
-    return  result
+    return result
 
 def main():
     da_list = ['a', 1, False, 1.3, [1,2,3]]
