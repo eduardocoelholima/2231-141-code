@@ -17,7 +17,8 @@ def merge_sort(L):
         return L
     else:
         ( half1, half2 ) = split(L)
-        return merge(merge_sort(half1), merge_sort(half2))
+        result = merge(merge_sort(half1), merge_sort(half2))
+        return result
 
 
 def split(L):
@@ -44,6 +45,7 @@ def merge(sorted1, sorted2):
     result = []
     index1 = 0
     index2 = 0
+    # go through both lists and pick the next correct item
     while index1 < len(sorted1) and index2 < len(sorted2):
         if sorted1[index1] <= sorted2[index2]:
             result.append(sorted1[index1])
@@ -51,6 +53,9 @@ def merge(sorted1, sorted2):
         else:
             result.append(sorted2[index2])
             index2 = index2 + 1
+    # when finished with one of the two lists
+    # go through the rest of the other list and add the items
+    # which are already sorted
     if index1 < len(sorted1):
         result.extend(sorted1[index1:])
     elif index2 < len(sorted2):

@@ -34,3 +34,4 @@ def partition( pivot, L ):
 if __name__ == "__main__":
     print( quick_sort( [1, 5, 3, 4, 2, 2, 7, 5, 3, 4, 9, 0, 1, 2, 5, 4, 76, 6] ) )
 
+
