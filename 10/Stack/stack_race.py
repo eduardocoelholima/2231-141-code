@@ -1,7 +1,7 @@
 from cs_stack import *
 import time
 
-SIZE = 5000000
+SIZE = 50000
 
 list_stack = list()
 start = time.perf_counter()

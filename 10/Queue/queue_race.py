@@ -1,7 +1,7 @@
 from cs_queue import *
 import time
 
-SIZE = 500000
+SIZE = 50000
 
 list_queue = list()
 start = time.perf_counter()
