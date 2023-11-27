@@ -122,7 +122,7 @@ def bt_to_string_in_order(tr):
     if tr is None:
         return ''
     else:
-        return bt_to_string(tr.left) + (str(tr.value) + ' ') + bt_to_string(tr.right)
+        return bt_to_string_in_order(tr.left) + (str(tr.value) + ' ') + bt_to_string_in_order(tr.right)
 
 
 def bt_to_string_pre_order(tr):
@@ -135,7 +135,7 @@ def bt_to_string_pre_order(tr):
     if tr is None:
         return ''
     else:
-        return (str(tr.value) + ' ') + bt_to_string(tr.left) + bt_to_string(tr.right)
+        return (str(tr.value) + ' ') + bt_to_string_pre_order(tr.left) + bt_to_string_pre_order(tr.right)
 
 
 def bt_to_string_post_order(tr):
@@ -148,7 +148,7 @@ def bt_to_string_post_order(tr):
     if tr is None:
         return ''
     else:
-        return (bt_to_string(tr.left) + bt_to_string(tr.right) + str(tr.value) + ' ')
+        return (bt_to_string_post_order(tr.left) + bt_to_string_post_order(tr.right) + str(tr.value) + ' ')
 
 
 def bt_search(tr, value):
@@ -268,8 +268,14 @@ def test_bst_search():
     print(bst_search(exampleBST.root, 11) == False)
 
 
+def test_traversal():
+    print(f'pre={bt_to_string_pre_order(exampleBST.root)}')
+    print(f'post={bt_to_string_post_order(exampleBST.root)}')
+    print(f'inorder={bt_to_string_in_order(exampleBST.root)}')
+
 # run tests
 
 if __name__ == "__main__":
-    test_bt_to_string()
-    test_bst_search()
+    # test_bt_to_string()
+    # test_bst_search()
+    test_traversal()
