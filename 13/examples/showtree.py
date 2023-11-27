@@ -138,10 +138,11 @@ def test():
         # btDraw(tree, 200)
         btPrint(tree.root)
         btDraw(tree.root, 200)
-        input("Hit enter to continue.\n")
-        clear()
-        setposition(0,0)
+        # input("Hit enter to continue.\n")
+        # clear()
+        # setposition(0,0)
 
 if __name__ == '__main__':
-    pass
-    # test()
+    # pass
+    test()
+    done()

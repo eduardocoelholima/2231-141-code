@@ -59,11 +59,14 @@ def bt_add(tr, value):
                 q.append(x.right)
             x = q.pop(0)
 
+
 def bt_size(tr):
     if tr is None:
         return 0
     else:
         return 1 + bt_size(tr.left) + bt_size(tr.right)
+
+
 def bt_height(tr, depth = 0):
     if tr is None and depth == 0:
         return 0
